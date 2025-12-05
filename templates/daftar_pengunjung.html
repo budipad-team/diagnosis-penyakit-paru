@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Daftar Pengunjung</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Daftar Pengunjung</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Pasien</th>
+                        <th>Jenis Kelamin</th>
+                        <th>Umur</th>
+                        <th>Berat Badan (kg)</th>
+                        <th>Tinggi Badan (cm)</th>
+                        <th>Riwayat Kesehatan</th>
+                        <th>Waktu Kunjungan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for pasien in daftar_pasien %}
+                    <tr>
+                        <td>{{ pasien.nama }}</td>
+                        <td>{{ pasien.jenis_kelamin }}</td>
+                        <td>{{ pasien.umur }}</td>
+                        <td>{{ pasien.berat_badan }}</td>
+                        <td>{{ pasien.tinggi_badan }}</td>
+                        <td>{{ pasien.riwayat_kesehatan }}</td>
+                        <td>{{ pasien.tanggal }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div class="center-btn">
+            <a href="{{ url_for('admin_dashboard') }}" class="button">Kembali ke Dashboard</a>
+        </div>
+    </div>
+</body>
+</html> 

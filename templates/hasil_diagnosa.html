@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h3 class="text-center">Hasil Diagnosis</h3>
+                </div>
+                <div class="card-body">
+                    {% if hasil %}
+                        {% for penyakit in hasil %}
+                            <div class="mb-4">
+                                <h4 class="text-primary">{{ penyakit.penyakit }}</h4>
+                                <p class="mb-2">Tingkat Kecocokan: {{ (penyakit.cf * 100)|round|int }}%</p>
+                                <div class="alert alert-info">
+                                    <h5>Saran Penanganan:</h5>
+                                    <p>{{ penyakit.saran }}</p>
+                                </div>
+                                {% if penyakit.gejala_tidak_ada %}
+                                    <div class="alert alert-warning">
+                                        <h5>Gejala yang tidak ditemukan:</h5>
+                                        <ul>
+                                            {% for gejala in penyakit.gejala_tidak_ada %}
+                                                <li>{{ gejala }}</li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                {% endif %}
+                            </div>
+                            {% if not loop.last %}
+                                <hr>
+                            {% endif %}
+                        {% endfor %}
+                    {% else %}
+                        <div class="alert alert-warning">
+                            <h4 class="alert-heading">Tidak ada diagnosis yang cocok</h4>
+                            <p>Berdasarkan gejala yang Anda pilih, sistem tidak dapat menentukan diagnosis yang tepat. 
+                               Disarankan untuk berkonsultasi dengan dokter untuk pemeriksaan lebih lanjut.</p>
+                        </div>
+                    {% endif %}
+                    
+                    <div class="text-center mt-4">
+                        <a href="{{ url_for('diagnosa_pasien_ui') }}" class="btn btn-primary">
+                            Diagnosis Baru
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %} 

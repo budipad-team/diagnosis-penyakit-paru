@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Diagnosa Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>👨‍⚕️ Diagnosa Pasien (sebagai Admin/Dokter)</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        {% if pertanyaan %}
+            <div class="question-container">
+                <h2>Pertanyaan Diagnosa:</h2>
+                <p class="question">Apakah pasien mengalami gejala berikut?</p>
+                <p class="symptom">{{ pertanyaan.title() }}</p>
+                
+                <form method="POST" action="{{ url_for('diagnosa_admin') }}" class="answer-form">
+                    <div class="button-group">
+                        <button type="submit" name="jawaban" value="ya" class="button yes-button">Ya</button>
+                        <button type="submit" name="jawaban" value="tidak" class="button no-button">Tidak</button>
+                        <button type="submit" name="jawaban" value="selesai" class="button finish-button">Selesai</button>
+                    </div>
+                </form>
+            </div>
+        {% endif %}
+
+        {% if gejala_terjawab %}
+            <div class="answered-symptoms">
+                <h3>Dipilih:</h3>
+                <ul class="symptom-list-inline">
+                    {% for g in gejala_terjawab %}
+                        <li>
+                            <span>{{ g.title() }}</span>
+                            {% if not hasil %}
+                            <form method="POST" action="" style="display:inline;">
+                                <input type="hidden" name="hapus_gejala" value="{{ g }}">
+                                <button type="submit" class="hapus-gejala-btn" title="Hapus gejala ini">&#10060;</button>
+                            </form>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+        {% if hasil %}
+            <div class="diagnosis-results">
+                <h2>Hasil Diagnosa Lengkap:</h2>
+                <ul>
+                    {% for item in hasil %}
+                        <li>
+                            <strong>{{ item.penyakit }}</strong> — Tingkat Kepastian: {{ "%.2f"|format(item.cf * 100) }}%<br>
+                            <em>Saran:</em> {{ item.saran }}<br>
+                            {% if item.gejala_tidak_ada %}
+                                <span class="missing-symptoms">Gejala relevan lain: {{ item.gejala_tidak_ada | join(', ') | capitalize }}</span>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+                <div class="button-row">
+                    <a href="{{ url_for('diagnosa_admin') }}" class="button">Diagnosa Baru</a>
+                    <a href="{{ url_for('admin_dashboard') }}" class="button">Kembali ke Dashboard Admin</a>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</body>
+</html>

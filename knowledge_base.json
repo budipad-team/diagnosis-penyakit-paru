@@ -1,0 +1,157 @@
+[
+    {
+        "nama": "Influenza",
+        "aturan": [
+            "batuk",
+            "demam",
+            "nyeri telan",
+            "sakit kepala",
+            "hidung tersumbat dan mengeluarkan cairan"
+        ],
+        "cf": 0.7,
+        "saran": "Beberapa langkah yang bisa Anda lakukan di antaranya adalah dengan istirahat secara cukup, banyak minum, dan menjaga tubuh agar tetap hangat. Untuk menurunkan demam, mengurangi rasa sakit dan pegal disarankan untuk mengonsumsi paracetamol atau ibuprofen yang dapat dibeli bebas di apotek."
+    },
+    {
+        "nama": "Faringitis",
+        "aturan": [
+            "batuk",
+            "demam",
+            "nyeri telan",
+            "sakit kepala",
+            "kelenjar yang membesar pada leher"
+        ],
+        "cf": 0.72,
+        "saran": "Apabila gejala yang terdeteksi dianggap beresiko dan dapat menimbulkan infeksi yang lebih serius, pengobatan sakit tenggorokan pada umumnya dapat ditangani dengan menggunakan antibiotik."
+    },
+    {
+        "nama": "Laringitis",
+        "aturan": [
+            "nyeri telan",
+            "batuk",
+            "demam",
+            "sulit bicara"
+        ],
+        "cf": 0.73,
+        "saran": "Disarankan untuk mengonsumsi obat-obatan pereda rasa sakit seperti ibuprofen atau parasetamol apabila merasakan gejala nyeri dan sakit kepala yang mengganggu, atau bahkan hingga menyebabkan Anda demam. Serta dianjurkan untuk banyak minum air putih guna mencegah dehidrasi, serta hindari mengonsumsi minuman yang mengandung kafein dan alkohol. Menghirup inhaler yang mengandung mentol dan mengonsumsi perment mint serta berkumur-kumur dengan air garam hangat atau obat kumur khusus juga dianjurkan apabila saluran pernapasan terasa tidak nyaman dan untuk membantu melegakan tenggorokan."
+    },
+    {
+        "nama": "Tonsilitis",
+        "aturan": [
+            "batuk",
+            "demam",
+            "nyeri telan"
+        ],
+        "cf": 0.7,
+        "saran": "Pengobatan tonsilitis biasanya diberikan untuk meringankan gejala, misalnya ibuprofen atau parasetamol sebagai pereda rasa sakit. Jika tonsilitis disebabkan oleh bakteri, maka antibiotik bisa digunakan. Selain dengan obat, pemulihan bisa ditunjang dengan istirahat yang cukup dan minum banyak cairan. Pada kasus tonsilitis yang tergolong parah dan kerap kambuh, biasanya dokter terpaksa akan melakukan operasi pengangkatan amandel untuk mengatasi hal tersebut."
+    },
+    {
+        "nama": "Tuberkulosis (TBC)",
+        "aturan": [
+            "batuk",
+            "demam",
+            "batuk darah"
+        ],
+        "cf": 0.95,
+        "saran": "Langkah pengobatan yang dibutuhkan adalah dengan mengonsumsi beberapa jenis antibiotik dalam jangka waktu tertentu. Sementara langkah utama untuk mencegah TB adalah dengan menerima vaksin BCG (Bacillus Calmette-Guerin). Di Indonesia, vaksin ini termasuk dalam daftar imunisasi wajib dan diberikan sebelum bayi berusia 2 bulan."
+    },
+    {
+        "nama": "Asma",
+        "aturan": [
+            "batuk",
+            "sesak napas",
+            "batuk berdahak",
+            "suara napas berbunyi ngik-ngik"
+        ],
+        "cf": 0.8,
+        "saran": "Obat yang direkomendasikan jika gejala asma muncul adalah inhaler pereda. Apabila gejala terus memburuk dan terjadi serangan asma baik secara perlahan atau secara tiba-tiba, maka pasien harus segera dirujuk ke rumah sakit. Walaupun jarang terjadi, serangan asma bisa saja merenggut nyawa."
+    },
+    {
+        "nama": "Kanker Paru-paru",
+        "aturan": [
+            "batuk",
+            "batuk berdahak",
+            "sesak napas",
+            "batuk berlendir",
+            "batuk berlendir diikuti keluarnya darah",
+            "lelah"
+        ],
+        "cf": 0.9,
+        "saran": "Ada beberapa faktor yang mempengaruhi metode pengobatan dan penanganan yang dilakukan untuk mengatasi kanker paru-paru yaitu: Seberapa parah penyebaran kanker, Kondisi kesehatan pasien, dan Jenis kanker yang diderita. Operasi pengangkatan kanker bisa dilakukan jika sel kanker belum menyebar secara luas ke bagian tubuh yang lainnya. Jika kondisi kesehatan tidak memungkinkan untuk dilakukan operasi pengangkatan, cara penanganan yang lainnya bisa diterapkan. Proses penghancuran sel kanker dengan cara radioterapi bisa dijalankan."
+    },
+    {
+        "nama": "Asbestosis",
+        "aturan": [
+            "batuk",
+            "batuk berdahak",
+            "batuk berlendir",
+            "batuk berlendir diikuti keluarnya darah",
+            "terjadi pembengkakan di area leher dan wajah",
+            "sesak napas"
+        ],
+        "cf": 0.88,
+        "saran": "Mendapatkan lebih banyak oksigen yang dibutuhkan oleh tubuh melalui paru-paru. Antibiotik bisa diberikan apabila asbestosis harus dirawat dengan jalan operasi, antibiotik dapat diberikan utuk mengurangi rasa sakit dan juga untuk mencegah terjadinya infeksi. Obat pereda sakit semacam Aspirin dan Tylenol dapat diberikan untuk mengurangi rasa sakit serta peradangan yang disebabkan oleh penyakit asbestosis."
+    },
+    {
+        "nama": "Emfisema",
+        "aturan": [
+            "batuk",
+            "batuk berdahak",
+            "sesak napas",
+            "batuk berlendir",
+            "batuk berlendir diikuti keluarnya darah"
+        ],
+        "cf": 0.78,
+        "saran": "Sebelum menjalani pengobatan, semua penderita emfisema disarankan agar menghentikan kebiasaan merokok, sebab dengan berhenti merokok dapat mencegah efek kerusakan akibat emfisema. Untuk meringankan gejala dan memperlambat perkembangan penyakit emfisema, jenis obat-obatan yang diresepkan adalah bronchodilator, mucolytic, steroid, dan antibiotik yang disesuaikan dengan tingkat keparahan penyakit."
+    },
+    {
+        "nama": "Bronkitis",
+        "aturan": [
+            "batuk",
+            "batuk berdahak",
+            "batuk berlendir",
+            "sesak napas"
+        ],
+        "cf": 0.75,
+        "saran": "Bronkitis akut biasanya akan menghilang dengan sendirinya, selagi menunggu penyakit ini berlalu disarankan minum banyak cairan dan banyak istirahat. Namun gejala bronkitis juga bisa bertahan lebih lama pada beberapa kasus. Sedangkan bronkitis kronis biasanya bertahan setidaknya tiga bulan. Belum ada obat yang bisa menyembuhkan bronkitis kronis, namun untuk tidak memperparah gejala yang muncul, hal yang harus dilakukan adalah dengan menghindari merokok atau lingkungan perokok."
+    },
+    {
+        "nama": "Difteri",
+        "aturan": [
+            "batuk",
+            "batuk berdahak",
+            "sesak napas",
+            "hidung beringus, awalnya cair, tapi lama-kelamaan menjadi kental dan kadang berdarah"
+        ],
+        "cf": 0.85,
+        "saran": "Langkah pengobatan akan dilakukan dengan 2 jenis obat, yaitu antibiotik dan antitoksin. Antibiotik akan membantu tubuh untuk membunuh bakteri dan menyembuhkan infeksi. Sedangkan antitoksin berfungsi untuk menetralisasi toksin atau racun difteri yang menyebar dalam tubuh."
+    },
+    {
+        "nama": "Rhinitis",
+        "aturan": [
+            "bersin-bersin",
+            "berkurangnya sensitivitas indera penciuman",
+            "rasa tidak nyaman atau iritasi ringan di dalam dan area sekitar hidung"
+        ],
+        "cf": 0.68,
+        "saran": "Rhinitis dapat dicegah dengan lingkungan yang berpolusi atau terpapar asap rokok serta alergen yang umum, seperti serbuk sari, tungau debu rumah, spora kapang, serta kelupasan kulit mati, kotoran dan urine kering hewan peliharaan. Jika gejala yang dialami tidak terlalu parah, perawatan rhinitis dapat dilakukan di rumah dengan mengonsumsi obat-obatan yang dijual scara bebas seperti dekongestan dan antihistamin. Selain itu, membersihkan saluran hidung juga dapat dilakukan untuk menjaga agar hidung bebas dari penyebab iritasi. Jika gejala yang dialami sudah parah, agar tidak berkelanjutan, untuk rhinitis yang tidak disebabkan oleh alergi, segera obati penyebab dasar, misalnya seperti mengonsumsi antibiotik untuk rhinitis akibat infeksi bakteri."
+    },
+    {
+        "nama": "Sinusitis",
+        "aturan": [
+            "hidung tersumbat atau keluar cairan kekuningan berbau dan diikuti keluarnya darah",
+            "berkurangnya sensitivitas penciuman",
+            "napas berbau"
+        ],
+        "cf": 0.65,
+        "saran": "Sinusitis butuh waktu sekitar dua hingga tiga minggu untuk sembuh sepenuhnya. Kondisi ini lebih lama dibandingkan pilek. Jika Anda menderita sinusitis ringan, obat-obatan pereda rasa sakit dan dekongestan akan membantu mengurangi gejala yang timbul. Jika gejala tidak membaik setelah seminggu memulai pengobatan, kondisi makin memburuk atau terus-menerus kembali. Dalam kasus seperti ini, antibiotik dan steroid semprot atau tetes mungkin akan diresepkan oleh dokter."
+    },
+    {
+        "nama": "kurang uang",
+        "aturan": [
+            "ngantuk",
+            "marah"
+        ],
+        "cf": 0.99,
+        "saran": "segeralah pinjol\r\n"
+    }
+]

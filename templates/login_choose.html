@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Sistem Pakar Paru</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> </head>
+<body class="login-page"> <div class="login-container">
+        <h1>Sistem Pakar Diagnosis Penyakit Paru</h1>
+        <img src="{{ url_for('static', filename='images/medical-doctor.png') }}" alt="Dokter Icon" class="doctor-icon">
+
+        <h2>Login Sebagai:</h2>
+        <div class="login-options">
+            <a href="{{ url_for('login_admin') }}" class="button">👨‍⚕️ Dokter / Admin</a>
+            <a href="{{ url_for('login_pasien') }}" class="button">🧑‍🤝‍🧑 Pengunjung</a>
+        </div>
+        <div class="illustration">
+            <img src="{{ url_for('static', filename='images/illustration1.png') }}" alt="Ilustrasi 1">
+            <img src="{{ url_for('static', filename='images/illustration2.png') }}" alt="Ilustrasi 2">
+            </div>
+    </div>
+</body>
+</html>

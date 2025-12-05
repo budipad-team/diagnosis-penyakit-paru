@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Sistem Pakar Diagnosis Penyakit Paru.</h1>
+        <h2>Dashboard Admin</h2>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <div class="button-group">
+            <a href="{{ url_for('diagnosa_admin') }}" class="button">Diagnosis Pasien (Mode Admin)</a>
+            <a href="{{ url_for('daftar_pengunjung') }}" class="button">Daftar Pengunjung</a>
+            <a href="{{ url_for('logout') }}" class="button logout-button">Logout</a>
+        </div>
+
+        <h3>Basis Pengetahuan</h3>
+        {% if basis %}
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nama Penyakit</th>
+                        <th>Gejala (Aturan)</th>
+                        <th>CF</th>
+                        <th>Saran</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for penyakit in basis %}
+                    <tr>
+                        <td data-label="Nama Penyakit">{{ penyakit.nama }}</td>
+                        <td data-label="Gejala (Aturan)">{{ penyakit.aturan|join(', ') }}</td>
+                        <td data-label="CF">{{ penyakit.cf }}</td>
+                        <td data-label="Saran">{{ penyakit.saran }}</td>
+                        <td data-label="Aksi">
+                            <a href="{{ url_for('admin_hapus', nama=penyakit.nama) }}"
+                               onclick="return confirm('Yakin ingin menghapus penyakit {{ penyakit.nama }}?');"
+                               class="button hapus-btn">Hapus</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>Basis pengetahuan kosong. Tambahkan penyakit baru di bawah.</p>
+        {% endif %}
+
+
+        <h3>Tambah Penyakit Baru</h3>
+        <form method="POST" action="{{ url_for('admin_tambah') }}">
+            <label for="nama">Nama Penyakit:</label>
+            <input type="text" id="nama" name="nama" required>
+
+            <label for="aturan">Gejala (pisahkan dengan koma):</label>
+            <input type="text" id="aturan" name="aturan" placeholder="Contoh: demam, batuk, sesak napas" required>
+
+            <label for="cf">CF (0.0 - 1.0):</label>
+            <input type="number" step="0.01" name="cf" min="0" max="1" required>
+
+            <label for="saran">Saran Penanganan:</label>
+            <textarea name="saran" rows="4" required></textarea>
+
+            <button type="submit" class="button">Tambah Penyakit</button>
+        </form>
+    </div>
+</body>
+</html>
