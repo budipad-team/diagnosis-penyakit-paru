@@ -3,7 +3,7 @@
 Aplikasi sistem pakar diagnosis penyakit paru berbasis web menggunakan Flask. Aplikasi ini membantu mendeteksi penyakit paru secara dini berdasarkan gejala yang dipilih oleh pengguna.
 
 ## 🚀 Cara Menjalankan Aplikasi
-
+```bash
 cd "diagnosis-penyakit-paru"
 python -m venv venv
 venv\Scripts\activate
@@ -13,6 +13,7 @@ python app.py
 
 ➡ Setelah berjalan, buka di browser:
 http://127.0.0.1:5000/
+```
 
 ## 🧠 Teknologi
 - Python
