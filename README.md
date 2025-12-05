@@ -4,7 +4,6 @@ Aplikasi sistem pakar diagnosis penyakit paru berbasis web menggunakan Flask. Ap
 
 ## 🚀 Cara Menjalankan Aplikasi
 
-```bash
 cd "diagnosis-penyakit-paru"
 python -m venv venv
 venv\Scripts\activate
@@ -35,7 +34,3 @@ Membantu deteksi awal penyakit paru sehingga masyarakat dapat mengambil langkah 
 ---
 
 **Made with ❤️ by budipad Team**
-
-
-
-
